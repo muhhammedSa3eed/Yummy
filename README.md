@@ -63,9 +63,3 @@ Clicking on a meal shows:
 - Responsive on all screen sizes
 - On initial load, fetches meals using empty name search
 
----
-
-## 🚀 Live Demo
-👉 [Click here to view]((https://muhhammedsa3eed.github.io/Yummy/))
-
-
