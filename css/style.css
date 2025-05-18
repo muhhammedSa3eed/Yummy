@@ -1,0 +1,226 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow: hidden;
+    font-family: var(--main-font);
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.5s;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-bottom: 0;
+}
+
+.loading-screen,
+.inner-loading-screen {
+    z-index: 999;
+}
+
+.loading-screen {
+    display: flex;
+}
+
+/* side-menu */
+nav>* {
+    margin-bottom: 20px;
+}
+
+.menu-controller span,
+.img-card,
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.menu-controller img {
+    width: 50px;
+}
+
+/* main content */
+.img-overlay {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+}
+
+.img-card:hover .img-overlay {
+    height: 100%;
+    transition: height 0.5s;
+}
+
+/* search */
+::placeholder {
+    color: grey !important;
+}
+
+:root {
+    --primary-color: #ffc107;
+    --secondary-color: #748182;
+    --tertiary-color: #1c1c1c;
+    --main-font: "Poppins", sans-serif;
+    --bg-layer: #ffffffcc;
+}
+
+.main-color {
+    color: var(--primary-color);
+}
+
+.bg-main-color {
+    background-color: var(--primary-color);
+}
+
+/* side-nav */
+.side-nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    z-index: 6;
+    transition: all 300ms ease;
+}
+
+.side-nav .menu {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    transition: all 300ms ease;
+}
+
+.menuLogo {
+    margin-top: 8px;
+    width: 40px;
+    height: auto;
+}
+
+.contactIcon {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.openIcon,
+.closeIcon {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: var(--primary-color);
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
+    transition: all 300ms ease;
+}
+
+.openIcon:hover,
+.closeIcon:hover {
+    color: darkgoldenrod;
+}
+
+.side-nav h1 {
+    font-family: "Dancing Script", cursive;
+    color: var(--primary-color);
+}
+
+.side-nav .side-nav-inner ul li {
+    position: relative;
+    color: inherit;
+    cursor: pointer;
+    padding: 0 3.5rem 0 1rem;
+    background-color: transparent;
+    transition: all 300ms ease;
+}
+
+.side-nav .side-nav-inner ul li:hover {
+    padding: 0 3rem 0 1.5rem;
+    color: var(--primary-color);
+    background-color: rgba(52, 58, 64, 0.1);
+}
+
+h2 {
+    color: #1c1c1c;
+}
+
+.meal-info h2,
+.area h2,
+.ingredient h2 {
+    color: var(--primary-color);
+}
+
+.ingredient {
+    min-height: 295px;
+}
+
+.meal-box {
+    overflow: hidden;
+}
+
+.meal-box img {
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease;
+}
+
+.meal-box:hover img {
+    transform: scale(1.1);
+}
+
+.img-overlay p {
+    color: var(--tertiary-color);
+}
+
+.scrollTopBtn {
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+input:focus,
+.btn:focus {
+    outline: 2px solid #7e838b !important;
+    box-shadow: 0 0 8px #2b2e3399 !important;
+    transition: all 0.3s ease-in-out;
+}
+
+body[data-bs-theme="light"] {
+    --bg-layer: #ffffff;
+}
+
+body[data-bs-theme="dark"] {
+    --bg-layer: #1e1e1e;
+}
+
+.modal-content {
+    background-color: var(--bg-layer);
+}
+
+.main-content, .searchContainer {
+    margin-left: 70px;
+}

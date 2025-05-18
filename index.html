@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yummy</title>
+  <!-- ^ Favicon -->
+  <link rel="icon" href="./images/logo.png">
+  <!-- ^ Fonts Family -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <!-- ^ Animation -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- ^ Toastify-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <!-- ^ Font Awesome -->
+  <link rel="stylesheet" href="./css/all.min.css">
+  <!-- ^ Bootstrap -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <!-- ^ Stylesheet Css -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <main>
+    <!-- * Loading -->
+    <div
+      class="loading-screen min-vh-100 position-fixed z-3  start-0 end-0 bottom-0 bg-black justify-content-center align-items-center">
+      <i class="fa fa-spinner fa-spin fa-5x "></i>
+    </div>
+    <!-- * SideBar -->
+    <div class="side-nav">
+      <div class="side-nav-inner p-3 bg-body-tertiary position-relative">
+        <div class="profile mb-5 text-center">
+          <h1>Yummy</h1>
+        </div>
+        <ul class="list-unstyled mb-0 overflow-hidden">
+          <li id="searchLink" class="rounded-2 py-2 mb-2" onclick="displaySearchInputs()">
+            <i class="fa-solid fa-magnifying-glass me-3"></i><span class="fs-5">Search</span>
+          </li>
+
+          <li id="categoriesLink" class="rounded-2 py-2 mb-2" onclick="getMealsByCategories()">
+            <i class="fa-solid fa-layer-group me-3"></i><span class="fs-5">Categories</span>
+          </li>
+
+          <li id="areaLink" class="rounded-2 py-2 mb-2" onclick="getMealsByArea()">
+            <i class="fa-solid fa-earth-americas me-3"></i><span class="fs-5">Area</span>
+          </li>
+
+          <li id="ingredientsLink" class="rounded-2 py-2 mb-2" onclick="getMealsByIngredients()">
+            <i class="fa-solid fa-burger me-3"></i><span class="fs-5">Ingredients</span>
+          </li>
+
+          <li id="contactUs" class="rounded-2 py-2 mb-2" onclick="contactForm()">
+            <i class="fa-solid fa-share-nodes me-3"></i><span class="fs-5">Contact us</span>
+          </li>
+
+          <li id="theme" class="rounded-2 py-2">
+            <i class="fa-solid fa-circle-half-stroke me-3"></i><span class="fs-5">theme: Dark</span>
+          </li>
+        </ul>
+        <div class="nav-footer position-absolute bottom-0 mb-3">
+          <div class="icons">
+            <i class="fa-brands fa-facebook me-1"></i>
+            <i class="fa-brands fa-x-twitter me-1"></i>
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <div class="footer">
+            <p>Copyright Â© 2019 All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+      <div class="menu rounded-end-4 bg-body-secondary">
+        <img class="menuLogo" src="./images/logo.png" alt="logo" />
+        <i class="menuIcon openIcon fa-solid fa-2x fa-align-justify"></i>
+        <i class="closeIcon menuIcon fa-solid fa-xmark fa-2x"></i>
+        <div class="contactIcon text-center fs-5">
+          <i class="fa-solid fa-globe mb-2"></i>
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+    </div>
+    <!-- * Content -->
+    <section class="main-content">
+      <div class="container p-4">
+        <div class="row g-4" id="dataRow">
+        </div>
+      </div>
+    </section>
+    <!-- * Loading Inner -->
+    <div class="inner-loading-screen  bg-black z-3 text-white position-fixed top-0 start-0 end-0 bottom-0"
+      style="display: none;">
+      <div class="d-flex justify-content-center align-items-center min-vh-100">
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+      </div>
+    </div>
+    <!-- * scrollTopBtn -->
+    <div>
+      <button id="scrollTopBtn" class="scrollTopBtn btn btn-secondary position-fixed d-none rounded-circle">
+        <i class="fa-solid fa-angles-up"></i>
+      </button>
+    </div>
+    <!-- * Modal Container -->
+    <div id="mealModal"
+      class="modal-overlay d-none position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex justify-content-center align-items-center"
+      style="z-index: 9999;">
+      <div class="modal-content rounded-3 p-4 position-relative"
+        style="max-width: 85%; max-height: 85%; overflow-y: auto;">
+        <button class="btn-close position-absolute top-0 end-0 m-3" onclick="closeModal()"></button>
+        <div id="modalBody" class="row"></div>
+      </div>
+    </div>
+    <!-- * Search Container -->
+    <section>
+      <div class="container searchContainer w-75" id="searchContainer">
+      </div>
+    </section>
+  </main>
+  <!-- ^ Toastify JS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <!-- ^ jQuery JS -->
+  <script src="./js/jquery-3.7.1.min.js"></script>
+  <!-- ^ Bootstrap JS  -->
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <!-- ^ Main Script -->
+  <script src="./js/index.js"></script>
+  <!-- ^ SweetAlert2 Library -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
