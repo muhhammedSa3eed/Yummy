@@ -66,6 +66,6 @@ Clicking on a meal shows:
 ---
 
 ## 🚀 Live Demo
-👉 [Click here to view]([https://rowidaadel.github.io/Yummy/](https://muhhammedsa3eed.github.io/Yummy/))
+👉 [Click here to view]((https://muhhammedsa3eed.github.io/Yummy/))
 
 
